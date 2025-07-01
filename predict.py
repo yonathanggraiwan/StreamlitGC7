@@ -27,10 +27,20 @@ def import_and_predict(image_data, model, target_size=(227, 227)):
 
         return predicted_class, confidence
     except Exception as e:
-        return f"❌ Error while processing image: {e}", 0
+        return f"Error while processing image: {e}", 0
 
 def run():
-    st.title("🧠 ASL Alphabet Classifier (A–Z without J & Z)")
+    img_url = "pred.jpg"
+    image = Image.open(img_url)
+
+    # Menampilkan gambar di tengah dengan kolom
+    cols = st.columns([1, 2, 1])  # Kiri, tengah, kanan
+
+    with cols[1]:
+        st.image(image, use_container_width=True)  # Ganti use_column_width → use_container_width
+
+
+    st.title("ASL Alphabet Classifier (A–Z without J & Z)")
     input_option = st.radio("Choose input method:", ["Upload", "Camera"])
 
     if input_option == "Upload":

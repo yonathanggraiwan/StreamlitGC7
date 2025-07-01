@@ -37,10 +37,6 @@ def run():
     st.markdown("""
     ### Dataset
     The dataset used is sourced from **Kaggle**, titled **[ASL Sign Language Alphabet Pictures [Minus J, Z]](https://www.kaggle.com/datasets/signnteam/asl-sign-language-pictures-minus-j-z)**.
-    
-    ---
-    ### Dataset Preview
-                
     """)
 
     # How to use Dashboard
