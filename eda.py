@@ -1,8 +1,10 @@
 # import libraries
 import streamlit as st
 import pandas as pd
+import seaborn as sns
+import plotly.express as px
+import matplotlib.pyplot as plt
 from PIL import Image
-import plot as pl
 
 # isi API
 def run():
@@ -38,7 +40,7 @@ def run():
     st.markdown ("""
                 
 The distribution of image sizes was detected using the following barplot visualization:""")
-
+    
     img_url = "eda1.png"
     image = Image.open(img_url)
     st.image(image)
