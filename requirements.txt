@@ -3,4 +3,4 @@ pandas==2.2.2
 numpy==1.26.4
 tensorflow
 tensorflow-hub==0.16.1
-h5py==3.10.0git a
+h5py==3.10.0
