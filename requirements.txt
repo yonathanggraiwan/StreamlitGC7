@@ -1,8 +1,6 @@
 streamlit==1.44.0
-altair==4.2.2
 pandas==2.2.2
 numpy==1.26.4
-pillow==11.2.1
 tensorflow
 tensorflow-hub==0.16.1
-h5py==3.10.0
+h5py==3.10.0git a
