@@ -9,7 +9,7 @@ from PIL import Image
 import streamlit as st
 
 # Import TensorFlow and Keras components
-# import tensorflow as tf
+import tensorflow as tf
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.image import load_img, img_to_array
 from tensorflow_hub.keras_layer import KerasLayer  # If using TF Hub layers
@@ -23,9 +23,6 @@ class_names = [
 
 # Fungsi prediksi
 def import_and_predict(image_data, model, class_names):
-    import tensorflow as tf
-    from tensorflow.keras.preprocessing.image import load_img, img_to_array
-
     image = load_img(image_data, target_size=(227, 227))
     img_array = img_to_array(image)
     img_array = tf.expand_dims(img_array, 0)
