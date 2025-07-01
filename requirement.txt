@@ -7,3 +7,4 @@ matplotlib==3.9.4
 opencv-python==4.11.0.86
 tensorflow==2.18.0
 tensorflow-hub==0.16.1
+searborn==0.13.2
