@@ -9,7 +9,7 @@ from PIL import Image
 import streamlit as st
 
 # Import TensorFlow and Keras components
-import tensorflow as tf
+# import tensorflow as tf
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.image import load_img, img_to_array
 from tensorflow_hub.keras_layer import KerasLayer  # If using TF Hub layers
