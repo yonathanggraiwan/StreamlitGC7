@@ -1,9 +1,7 @@
 import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
+# import matplotlib.pyplot as plt
+# import seaborn as sns
 import os
-import seaborn as sns
-import matplotlib.pyplot as plt
 import streamlit as st
 from PIL import Image
 import random
