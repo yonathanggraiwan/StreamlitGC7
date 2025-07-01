@@ -22,7 +22,10 @@ class_names = [
 ]
 
 # Fungsi prediksi
-def import_and_predict(image_data, model, class_names=class_names):
+def import_and_predict(image_data, model, class_names):
+    import tensorflow as tf
+    from tensorflow.keras.preprocessing.image import load_img, img_to_array
+
     image = load_img(image_data, target_size=(227, 227))
     img_array = img_to_array(image)
     img_array = tf.expand_dims(img_array, 0)
@@ -31,7 +34,7 @@ def import_and_predict(image_data, model, class_names=class_names):
     predictions = model.predict(img_array)
     predicted_idx = np.argmax(predictions[0])
     predicted_label = class_names[predicted_idx]
-    confidence = predictions[0][predicted_idx] * 100  # dalam persen
+    confidence = predictions[0][predicted_idx] * 100
 
     return f"Prediction: {predicted_label} (Confidence: {confidence:.2f}%)"
 
